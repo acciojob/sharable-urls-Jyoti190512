@@ -4,4 +4,5 @@ function updateUrl() {
         var year = encodeURIComponent(document.getElementById("year").value);
 
         var url = "https://localhost:8080/?name=" + name + "&year=" + year;
-        document.getElementById("url").textContent = url;}
+        document.getElementById("url").textContent = url;
+}
