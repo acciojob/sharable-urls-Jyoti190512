@@ -1,8 +1,12 @@
-// your code here
 function updateUrl() {
-        var name = encodeURIComponent(document.getElementById("name").value);
-        var year = encodeURIComponent(document.getElementById("year").value);
+    const name = document.getElementById('name').value;
+    const year = document.getElementById('year').value;
 
-        var url = "https://localhost:8080/?name=" + name + "&year=" + year;
-        document.getElementById("url").textContent = url;
+    const urlElement = document.getElementById('url');
+    const baseUrl = "https://localhost:8080/";
+
+    // Update the URL with the appropriate query string
+    const updatedUrl = `${baseUrl}?name=${encodeURIComponent(name)}&year=${year}`;
+    urlElement.textContent = updatedUrl;
 }
+
